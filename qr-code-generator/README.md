@@ -4,10 +4,11 @@
 
 This is a simple python project web project. Just paste any link you want to convert to a QR Code and press the button
 
+<div>
 <img src="img/1.png" alt="drawing" width="240"/>
 <img src="img/2.png" alt="drawing" width="240"/>
 <img src="img/3.png" alt="drawing" width="240"/>
-
+</div>
 ___
 
 ### How to run this project
