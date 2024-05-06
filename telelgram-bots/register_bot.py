@@ -11,6 +11,8 @@ name = ''
 password = ''
 
 
+
+
 def execute_sql(path, command):
     db = sqlite3.connect(path)
     print(f'✅ Connected to {path}')
