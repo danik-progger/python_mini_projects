@@ -9,6 +9,20 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
+def create_qr(link: str):
+    memory = BytesIO()
+    final_img_src = ""
+
+    if link:
+        qrcode.make(link).save(memory)
+
+        memory.seek(0)
+
+        final_img_src = "data:image/png;base64," + \
+            b64encode(memory.getvalue()).decode('ascii')
+    return final_img_src
+
+
 @app.route('/', methods=['POST'])
 def generateQR():
     memory = BytesIO()

@@ -1,3 +1,6 @@
 .env
 .vscode
 __pycahce__
+utils_bot/utils/shorten_url/__pycache__/*
+utils_bot/utils/qr/__pycache__/*
+utils_bot/utils/__pycache__/*
