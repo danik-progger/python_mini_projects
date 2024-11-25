@@ -39,6 +39,15 @@ def shorten_link(message):
     bot.register_next_step_handler(message, link)
 
 
-print("🚀 Bot is running 🚀")
-bot.infinity_polling()
-print("⛔ Bot stopped ⛔")
+def log(func):
+    def wrapper(*args, **kwargs):
+        print("🚀 {func.__name__} is running 🚀")
+        res = func(*args, **kwargs)
+        print("⛔ {func.__name__} stopped ⛔")
+        return res
+    return wrapper
+
+@log
+def run_bot(bot): bot.infinity_polling()
+
+
