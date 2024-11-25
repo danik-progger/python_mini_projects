@@ -3,7 +3,7 @@ from pika import ConnectionParameters, BlockingConnection
 
 connection_params = ConnectionParameters(
     host="localhost",
-    port=5432
+    port=5672
 )
 
 def process_messages(ch, method, properties, body):
